@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@prismicio/client": "^4.0.0",
+    "prismic-javascript": "^3.0.2"
+  }
+}
