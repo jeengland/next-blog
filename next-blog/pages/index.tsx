@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+
+import PreviewPage from "@components/homepage/PreviewPage";
 
 export default function Home() {
   return (
@@ -10,7 +10,8 @@ export default function Home() {
         <meta name="description" content="A simple blog made in Next.js" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1></h1>
+      <h1>Hi</h1>
+      <PreviewPage />
     </div>
   );
 }
