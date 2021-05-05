@@ -7,11 +7,21 @@ export default function PreviewPage() {
   console.log(data);
   return (
     <>
-      <Heading mt="1rem" as="h2" fontSize="xx-large" textAlign="center">
+      <Heading
+        mt="1rem"
+        mb="2rem"
+        as="h2"
+        fontSize="xx-large"
+        textAlign="center"
+      >
         Latests Posts
       </Heading>
       {data?.results.map((postInfo) => (
-        <PostPreview key={postInfo.id} postInfo={postInfo} />
+        <PostPreview
+          key={postInfo.id}
+          postInfo={postInfo}
+          isLoading={isLoading}
+        />
       ))}
     </>
   );
