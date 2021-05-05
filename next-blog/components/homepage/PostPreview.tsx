@@ -1,14 +1,19 @@
 import { RichText } from "prismic-reactjs";
 import Image from "next/image";
-import Link from "next/link";
+import NextLink from "next/link";
+import { Heading, Link } from "@chakra-ui/react";
 
 export default function PostPreview({ postInfo }) {
   const { content, date, hero, title } = postInfo.data;
   return (
     <>
-      <Link href={`/post/${postInfo.id}`}>
-        <h1>{RichText.asText(title)}</h1>
-      </Link>
+      <NextLink href={`/post/${postInfo.id}`}>
+        <Link>
+          <Heading as="h3" fontSize="xl">
+            {RichText.asText(title)}
+          </Heading>
+        </Link>
+      </NextLink>
       <p>{date}</p>
       <Image
         src={hero.url}
@@ -17,7 +22,9 @@ export default function PostPreview({ postInfo }) {
         height={hero.dimensions.height}
       />
       <p>{content[0].text}</p>
-      <Link href={`/post/${postInfo.id}`}>Read More</Link>
+      <NextLink href={`/post/${postInfo.id}`}>
+        <Link fontWeight="bold">Read More</Link>
+      </NextLink>
     </>
   );
 }

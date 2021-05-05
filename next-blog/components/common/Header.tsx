@@ -23,7 +23,7 @@ export default function Header() {
           <Icon as={FaGithub} ml="5px" />
         </Flex>
       </Flex>
-      <Heading cursor="pointer" ml="-100px">
+      <Heading as="h1" cursor="pointer" ml="-100px">
         <Link href="/">What I'm Up To</Link>
       </Heading>
       <ColorModeToggle />
