@@ -7,7 +7,7 @@ export default function BaseContainer({ children }) {
   return (
     <Box pos="relative" minH="120vh">
       <Header />
-      <Box w="50%" m="0 auto">
+      <Box w="50%" m="0 auto" pb="5rem">
         {children}
       </Box>
       <Footer />
